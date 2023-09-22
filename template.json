@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": [ "character", "monster" ],
+    "types": [ "character", "monster", "fellow" ],
     "templates": {
       "common": {
         "hp": { "value": 0 },
@@ -28,9 +28,84 @@
           "spirit": { "correction": 0, "growth": 0 }
         }
       }
+    },
+    "monster": {
+      "soulscars" : 0,
+      "level" : 0,
+      "know_reputation" : 0,
+      "know_weakness" : 0,
+      "initiative" : 0,
+      "movement" : 0,
+      "fortitude" : 0,
+      "willpower" : 0,
+      "type" : "",
+      "shardbearer" : false,
+      "description" : ""
+    },
+    "fellow" : {
+      "templates" : ["common"]
     }
   },
   "Item": {
-    "types": [ "weapon", "armor", "accessory", "consumable", "item", "class", "race", "skill", "feat", "spell", "monstersection", "monsterskill" ]
+    "types": [ "weapon", "armor", "accessory", "consumable", "item", "class", "race", "skill", "feat", "spell", "monstersection", "monsterskill" ],
+    "templates" : {
+      "items" : {
+        "cost" : 0,
+        "quantity" : 1,
+        "buyable": true,
+        "description" : ""
+      }
+    },
+    "weapon" :{
+      "templates" :["items"]
+    },
+    "armor" : {
+      "templates" :["items"],
+      "defense" : 0,
+      "evasion_bonus" : 0,
+      "metallic" : false,
+      "shield" : false
+    },
+    "accessory" :{
+      "templates" :["items"]
+    },
+    "consumable" :{
+      "templates" :["items"]
+    },
+    "item" :{
+      "templates" :["items"]
+    },
+    "class" :{
+      "description" : ""
+    },
+    "race" :{
+      "description" : "",
+      "abilities" : ""
+    },
+    "feat" : {
+      "min_level" : 1,
+      "class" : "",
+      "description" : ""
+    },
+    "spell": {
+      "level" : 1,
+      "mp_cost" : 1,
+      "does_damage" : false,
+      "power" : 0,
+      "effect_description" : "",
+      "type" : "",
+      "action" : "major"
+    },
+    "monstersection" : {
+      "accuracy" : 0,
+      "added_damage" : 0,
+      "evasion" : 0,
+      "defense" : 0,
+      "hp" : { "value": 0, "max": 0},
+      "mp" : { "value": 0, "max": 0}
+    },
+    "monsterskill" : {
+      "description" : ""
+    }
   }
 }
