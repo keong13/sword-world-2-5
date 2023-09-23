@@ -103,3 +103,16 @@ export enum ClassType {
 export enum Language {
   TradeCommon = "common",
 }
+export enum MonsterCategory {
+  Animal = 'animal',
+  Barbarous = 'barbarous',
+  Construct = 'construct',
+  Daemon = 'daemon',
+  Fairy = 'fairy',
+  Golem = 'golem',
+  Humanoid = 'humanoid',
+  Magitech = 'magitech',
+  Mythical_Beast = 'myth_beast',
+  Plant = 'plant',
+  Undead = 'undead'
+};
